@@ -16,7 +16,7 @@ class ProductsController < ApplicationController
     redirect_to @product if @product.save
   end
 
-  def remove
+  def destroy
     @product = Product.find(params[:id])
     @product.destroy
     redirect_to products_path, notice: 'Product was successfully deleted.'
@@ -25,6 +25,6 @@ class ProductsController < ApplicationController
   private
 
   def require_params
-    params.require(:product).permit(:name, :price, :stock, :description, :category_id)
+    params.require(:product).permit(:name, :price, :stock, :description, :category_id, :product_image)
   end
 end
