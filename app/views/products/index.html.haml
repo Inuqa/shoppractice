@@ -2,5 +2,6 @@
 - @products.each do |product|
     = product.name
     = image_tag product.product_image.variant(resize_to_limit: [100,100])
+    = link_to 'Show' ,product_path(product)
 %br
 = link_to 'New', new_product_path
