@@ -1,5 +1,21 @@
-%h1 sign up
+%h1 Sign up
 
 = form_with(model: @user, local: true) do |form|
   .field
-    = form_label :name
+    = form.label :name
+    = form.text_field :name
+  .field
+    = form.label :last_name
+    = form.text_field :last_name
+  .field
+    = form.label :email
+    = form.text_field :email
+  .field
+    = form.label :password
+    = form.password_field :password
+  .field
+    = form.label :password_confirmation
+    = form.password_field :password_confirmation
+  .action
+    = form.submit
+

@@ -1,2 +1,6 @@
-%h1 Users#index
-%p Find me in app/views/users/index.html.haml
+%h1 Users
+- @users.each do |user|
+  = user.name
+  = user.last_name
+  = user.email
+  %br

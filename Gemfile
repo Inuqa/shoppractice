@@ -22,7 +22,10 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
-gem 'rails_warden'
+git 'https://github.com/wardencommunity/rails_warden' do
+  gem 'rails_warden'
+end
+
 # Use Active Storage variant
 gem 'image_processing', '~> 1.2'
 

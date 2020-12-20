@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/wardencommunity/rails_warden
+  revision: fb45d162be4439608e9d259c8fab4e0adcccb2e4
+  specs:
+    rails_warden (1.0.0)
+      rails (>= 5)
+      warden (>= 1.2.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -149,8 +157,6 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.3.0)
       loofah (~> 2.3)
-    rails_warden (0.6.0)
-      warden (>= 1.2.0)
     railties (6.0.3.4)
       actionpack (= 6.0.3.4)
       activesupport (= 6.0.3.4)
@@ -238,7 +244,7 @@ DEPENDENCIES
   listen (~> 3.2)
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.4)
-  rails_warden
+  rails_warden!
   sass-rails (>= 6)
   selenium-webdriver
   spring
