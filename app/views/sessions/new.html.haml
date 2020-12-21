@@ -1,2 +1,11 @@
-%h1 Sessions#new
-%p Find me in app/views/sessions/new.html.haml
+%h1 Login
+%p{id: "”alert”"}= alert
+= form_with(url: sessions_path, method: 'post', local: true) do |form|
+  .field
+    = form.label :email
+    = form.text_field :email
+  .field
+    = form.label :password
+    = form.password_field :password
+  .action
+    = form.submit "Login"
