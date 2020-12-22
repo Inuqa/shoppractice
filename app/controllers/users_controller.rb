@@ -13,6 +13,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    @user.roles << Role.second
     redirect_to @user if @user.save
   end
 
