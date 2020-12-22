@@ -3,6 +3,6 @@ class User < ApplicationRecord
   has_and_belongs_to_many :roles
 
   def admin?
-    roles.find_by(name: 'admin')
+    @admin ||= roles.find_by(name: 'admin')
   end
 end

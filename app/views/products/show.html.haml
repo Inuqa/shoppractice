@@ -2,5 +2,6 @@
 %p description: #{@product.description}
 %p price: #{@product.price}
 %p stock: #{@product.stock}
-= link_to 'destroy', @product, method: :delete, data: {confirm: 'Are you sure?'}
 = link_to 'back' , products_path
+- if admin?
+  = link_to 'destroy', @product, method: :delete, data: {confirm: 'Are you sure?'}

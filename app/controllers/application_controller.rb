@@ -1,9 +1,17 @@
 class ApplicationController < ActionController::Base
   include RailsWarden::Authentication
+  helper_method :current_user
+  helper_method :admin?
 
   def current_user
-    warden.user
+    user
   end
 
-  helper_method :current_user
+  def admin?
+    current_user&.admin?
+  end
+
+  def redirect_if_not_admin
+    redirect_to root_path unless admin?
+  end
 end

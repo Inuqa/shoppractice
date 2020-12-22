@@ -1,4 +1,6 @@
 class ProductsController < ApplicationController
+  before_action :redirect_if_not_admin, only: %i[new create destroy]
+
   def index
     @products = Product.all
   end
