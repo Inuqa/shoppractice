@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'users#index'
+  root 'products#index'
   resources :users
   resources :products
   resources :sessions, only: %i[new create destroy]
