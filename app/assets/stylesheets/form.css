@@ -47,3 +47,17 @@ h1 {
   top: 10px;
   left: 230px;
 }
+
+.products {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.products .product {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: 5px;
+  text-align: center;
+  font-family: arial;
+}
