@@ -4,9 +4,11 @@
   - @products.each do |product|
     .product
       %p
-        =product.name
+        = product.name
       %p
         = image_tag product.product_image.variant(resize_to_limit: [100,100])
+      %p
+        = '$ ' + product.price
       %p
         = link_to 'Show' ,product_path(product)
 %br

@@ -1,12 +1,17 @@
-.product
-  %h1= @product.name
-  %p description: #{@product.description}
+.product-display
+  %h1
+    = @product.name
+  %p.image
+    #{image_tag @product.product_image.variant(resize_to_limit:[200,200])}
+  %p
+    description: #{@product.description}
   .stock_price_box
     .price
-      %p price: #{@product.price}
+      %p 
+        price: #{@product.price}
     .stock
-      %p Disponibilidad: #{@product.stock}
-  %p #{image_tag @product.product_image.variant(resize_to_limit:[200,200])}
-  = link_to 'back' , products_path
-  - if admin?
-    = link_to 'destroy', @product, method: :delete, data: {confirm: 'Are you sure?'}
+      %p 
+        Disponibilidad: #{@product.stock}
+= link_to 'back' , products_path
+- if admin?
+  = link_to 'destroy', @product, method: :delete, data: {confirm: 'Are you sure?'}
